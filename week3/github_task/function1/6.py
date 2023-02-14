@@ -1,10 +1,12 @@
 s = input()
 
 def rev(sentence):
-    words = sentence.split(' ')
-    reverse_sentence = ' '.join(reversed(words))
-    return reverse_sentence
+    words = sentence.split()[::-1]
+    reverse_sentence = []
+    for i in words:
+        reverse_sentence.append(i)
+    print(" ".join(reverse_sentence))
 
 
 
-print(rev(s))
+rev(s)
