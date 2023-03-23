@@ -25,8 +25,8 @@ font = pg.font.SysFont("Times New Roman", 30)
 right = pg.image.load('./img/left.png')
 left = pg.image.load('./img/right.png')
 
-rhand = pg.transform.scale(pg.image.load('img/left.png'), (right.get_width()//1.75, right.get_height()//1.75))
-lhand = pg.transform.scale(pg.image.load('img/right.png'), (left.get_width()//1.75, left.get_height()//1.75))
+lhand = pg.transform.scale(pg.image.load('img/left.png'), (right.get_width()//1.75, right.get_height()//1.75))
+rhand = pg.transform.scale(pg.image.load('img/right.png'), (left.get_width()//1.75, left.get_height()//1.75))
 
 
 
@@ -53,9 +53,9 @@ while running:
     screen.blit(background, (0, 0))
     text = font.render(f'The time is now: {hour}:{minute}:{second}', True, BLUE)
     blit_rotate_center(rhand, WIDTH // 2 - rhand.get_width()//2, HEIGHT // 2 - rhand.get_height()//2,
-                       (-6*minute) - 11)  # Error 11
+                       (-6*minute) - 11)  
     blit_rotate_center(lhand, WIDTH // 2 - lhand.get_width() // 2, HEIGHT // 2 - lhand.get_height() // 2,
-                       (-6*second) - 3)  # Error 3
+                       (-6*second) - 3)  
     screen.blit(text, (250, 550))
 
     pg.display.update()
